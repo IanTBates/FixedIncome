@@ -1,0 +1,789 @@
+<!DOCTYPE html><html><head>
+      <title>Guidelines</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Iantb\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="tu-sif-fixed-income-analysis-documentation">TU SIF Fixed Income Analysis Documentation </h1>
+<h2 id="introduction">Introduction </h2>
+<p>This documentation is meant to educated, inform, and document the concepts and steps taken to create this project. The Fixed Income Analysis application is writed in python and coded by Ian Bates as part of a graduate project for the the University of Tulsa's fixed income seminar for the purpose of illustrating and providing insight into yields, yield curves, bonds, and bond valuation. As such, this documentation is provided for users and future contributors of this project.</p>
+<p>This documentation will cover 3 major sections: the fixed income concecpts required to understand the project, how to use the application, and the python code and steps taken to create the project deliverables.</p>
+<h4 id="inspiration-and-references">Inspiration and References </h4>
+<p>The inspriration for this project was the CFA level 2 Fixed Income curriculum and is the source of the initial bond valuation concepts. This is further supplemented by <em>The Handbook of Fixed Income Securities</em> by Fabozzi, Statistical Analysis<br>
+of Financial Data in R by Rene Carmona,</p>
+<h2 id="fixed-income-concepts">Fixed Income Concepts </h2>
+<h4 id="yields">Yields </h4>
+<p>There are serveral core yields that are important to understand in fixed income, we will focus on these four: yield to maturity (YTM), par (coupon*), spot (zero), and forward.</p>
+<p>The <strong>yield to maturity</strong> is the yield you are likely most familiar with, as it is commonly used in the present value formula: <em>N</em>, <em>I</em>, <em>PV</em>, <em>PMT</em>, <em>FV</em>; the <em>I</em> represents the yield to maturity and is expressed in this formula:<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>p</mi><mi>m</mi><mi>t</mi></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>I</mi><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">PV = \displaystyle\sum_{t=1}^n\frac {pmt} {(1 + I) ^ t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9185em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">m</span><span class="mord mathnormal">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
+It is clear from this formula that the yield to maturity is a discount rate. It is the rate used to discount the cashflow and is compounded as a function of time. However, for each period it is a constant rate, which may not be an accurate portrayal of what we ussually witness in real life.</p>
+<p>In <strong>yield curve</strong> is the collection of yield rates over various periods of time. In normal (positive) economic conditions, the yield curve is upward sloping.</p>
+<p>The <strong>par yield</strong> is the yield to maturity of a bond issued at par. This means that the bond's coupon rate is the same as the yield to maturity.<br>
+The OIS curve is a par curve: a series of par yields for different periods. The OIS curve is comprised of overnieght indexed swaps, which are plain vinilla interest rate swaps. This means that someone is agreeing to swap payments on some notional amount (lets say 1 million), where there is one fixed rate payer (4%) and one floating rate payer (Overnight Index Rates). So during the stipulated payment periods, they each exchange payments, the fixed rate payer always gives the same amount (40,000) and the floating rate payer always gives whatever the overnight index rate dictates (if 2% then 20,000).</p>
+<p>The <strong>spot yield</strong> or <strong>zero yield</strong> is the yield to maturity of a bond with zero coupons. This yield can be bootstrapped from the par yields on benchmark bonds. The formula for the spot yield is derived from:<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">1 = \displaystyle\sum_{t=1}^n\frac {par_n} {(1 + spot_t) ^ t}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.9185em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
+This equation can be expanded into a generalized form to calculate a single period where n is unknown, but 1 to n-1 is known:<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mo>=</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">1 = \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t} + \frac {par_n} {(1 + spot_n) ^ n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0682em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.0436em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
+Rearranging it algebraically we can calculate the spot for time n:<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mn>1</mn><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t} = \frac {par_n} {(1 + spot_n) ^ n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.0682em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0436em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5904em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow><mo>∗</mo><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac><mo stretchy="false">)</mo><mo>=</mo><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow></mstyle></mrow><annotation encoding="application/x-tex">{(1 + spot_n) ^ n} * (1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}) = {par_n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:3.0682em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></span><br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub><msup><mo stretchy="false">)</mo><mi>n</mi></msup></mrow><mo>=</mo><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mn>1</mn><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac></mstyle></mrow></mfrac></mrow><annotation encoding="application/x-tex">{(1 + spot_n) ^ n}  = \frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.0658em;vertical-align:-2.9582em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-4.0311em;"><span class="pstrut" style="height:3.8011em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.4781em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.9582em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub></mrow><mo>=</mo><mroot><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mn>1</mn><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac></mstyle></mrow></mfrac><mi>n</mi></mroot></mrow><annotation encoding="application/x-tex">{1 + spot_n}  = \sqrt[n]{\frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.2935em;vertical-align:-2.9582em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.7585em;"><span style="top:-1.5263em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9737em;"><span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3353em;"><span class="svg-align" style="top:-6.2535em;"><span class="pstrut" style="height:6.2535em;"></span><span class="mord" style="padding-left:1.056em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-4.0311em;"><span class="pstrut" style="height:3.8011em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.4781em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.9582em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2953em;"><span class="pstrut" style="height:6.2535em;"></span><span class="hide-tail" style="min-width:0.742em;height:4.3335em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="4.3335em" viewBox="0 0 400000 4333" preserveAspectRatio="xMinYMin slice"><path d="M702 80H40000040
+H742v4199l-4 4-4 4c-.667.7 -2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1
+h-12l-28-84c-16.667-52-96.667 -294.333-240-727l-212 -643 -85 170
+c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
+219 661 l218 661zM702 80H400000v40H742z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.9582em;"><span></span></span></span></span></span></span></span></span></span><br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>n</mi></msub></mrow><mo>=</mo><mroot><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mn>1</mn><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></munderover><mfrac><mrow><mi>p</mi><mi>a</mi><msub><mi>r</mi><mi>n</mi></msub></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><mi>t</mi></msub><msup><mo stretchy="false">)</mo><mi>t</mi></msup></mrow></mfrac></mstyle></mrow></mfrac><mi>t</mi></mroot><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">{spot_n}  = \sqrt[t]{\frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}} - 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8095em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:4.2935em;vertical-align:-2.9582em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.6662em;"><span style="top:-1.5263em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9737em;"><span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3353em;"><span class="svg-align" style="top:-6.2535em;"><span class="pstrut" style="height:6.2535em;"></span><span class="mord" style="padding-left:1.056em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8011em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1076em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-4.0311em;"><span class="pstrut" style="height:3.8011em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.4781em;"><span class="pstrut" style="height:3.8011em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.9582em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.2953em;"><span class="pstrut" style="height:6.2535em;"></span><span class="hide-tail" style="min-width:0.742em;height:4.3335em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="4.3335em" viewBox="0 0 400000 4333" preserveAspectRatio="xMinYMin slice"><path d="M702 80H40000040
+H742v4199l-4 4-4 4c-.667.7 -2 1.5-4 2.5s-4.167 1.833-6.5 2.5-5.5 1-9.5 1
+h-12l-28-84c-16.667-52-96.667 -294.333-240-727l-212 -643 -85 170
+c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
+219 661 l218 661zM702 80H400000v40H742z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.9582em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span></p>
+<p>The <strong>forward yield</strong> is the relatively simpler. The forward yield is the yield that would be the spot yield from some point in time. Thus if we know what the spot yields are today we can derive what the expected yield should be at some point in the future, knowing how compouning rates work we derive:<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>F</mi><msub><mi>Y</mi><mrow><mrow><mi>t</mi><mn>2</mn><mo>−</mo><mi>t</mi><mn>1</mn></mrow><mtext>  </mtext><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mtext>  </mtext><mi>t</mi><mn>1</mn><mtext>  </mtext><mi>f</mi><mi>r</mi><mi>o</mi><mi>m</mi><mtext>  </mtext><mi>n</mi><mi>o</mi><mi>w</mi></mrow></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><msub><mi>t</mi><mn>2</mn></msub></msub><msup><mo stretchy="false">)</mo><msub><mi>t</mi><mn>2</mn></msub></msup></mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>s</mi><mi>p</mi><mi>o</mi><msub><mi>t</mi><msub><mi>t</mi><mn>1</mn></msub></msub><msup><mo stretchy="false">)</mo><msub><mi>t</mi><mn>1</mn></msub></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">FY_{{t2-t1} \; rate \; t1 \; from \; now }= \frac {(1 + spot_{t_2}) ^ {t_2}} {(1 + spot_{t_1}) ^ {t_1}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mtight">2</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight">t</span><span class="mord mtight">1</span></span><span class="mspace mtight" style="margin-right:0.3253em;"></span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">e</span><span class="mspace mtight" style="margin-right:0.3253em;"></span><span class="mord mathnormal mtight">t</span><span class="mord mtight">1</span><span class="mspace mtight" style="margin-right:0.3253em;"></span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">ro</span><span class="mord mathnormal mtight">m</span><span class="mspace mtight" style="margin-right:0.3253em;"></span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight" style="margin-right:0.02691em;">w</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4067em;vertical-align:-0.9361em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4706em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7196em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">p</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9361em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h4 id="example-1">Example 1 </h4>
+<p>A Yield Curve ussually appears upward sloping and can be interpreted using a spline, notably using the method outlined by Nelson and Spiegel. My example is relatively simple, showing the typical nature of deminishing returns illustrated by convexity.</p>
+<div class="code-chunk" data-id="ex1input" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=0, cmd=true id=&quot;ex1input&quot;}" class="language-python python"><code>interest_rates_level <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+interest_rates_convex <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+interest_rates <span class="token operator">=</span> <span class="token punctuation">[</span>level <span class="token operator">-</span> <span class="token punctuation">(</span>convex <span class="token operator">/</span> <span class="token number">2.5</span> <span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">1.5</span> <span class="token keyword keyword-for">for</span> level<span class="token punctuation">,</span> convex <span class="token keyword keyword-in">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span> interest_rates_level<span class="token punctuation">,</span> interest_rates_convex<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>interest_rates_level<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>interest_rates_convex<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>interest_rates<span class="token punctuation">)</span>
+</code></pre><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="ex1plot1" data-cmd="python"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, cmd=true matplotlib=true continue=&quot;ex1input&quot; id=&quot;ex1plot1&quot;}" class="language-python python"><code><span class="token keyword keyword-import">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword keyword-as">as</span> plt
+<span class="token keyword keyword-import">import</span> numpy <span class="token keyword keyword-as">as</span> np
+<span class="token keyword keyword-from">from</span> scipy<span class="token punctuation">.</span>interpolate <span class="token keyword keyword-import">import</span> make_interp_spline
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>interest_rates<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> interest_rates
+
+x_smooth <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+spline <span class="token operator">=</span> make_interp_spline<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+y_smooth <span class="token operator">=</span> spline<span class="token punctuation">(</span>x_smooth<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_smooth<span class="token punctuation">,</span>y_smooth<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># show figure</span>
+</code></pre><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>The European Central Bank provides the yield curves from septermber 2004 for Par, Spot, and Instantaneous Forward Rates. View this link for real world exampls over time.<br>
+<a href="https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html">https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html</a></p>
+<p>Look at how Europe experimented with negative rates for a number of years. What does this entail? Japan and some other countries also experimented with negative rates.</p>
+<p>If you are wondering if it worked, look at if they still have negative rates.</p>
+<h4 id="binomial-tree-lattice">Binomial Tree (lattice) </h4>
+<p>Trees are common methods of organizing objects, and in the world of finance a useful tree for visualization and valuation of bonds and options.</p>
+<h5 id="tree">Tree </h5>
+<p>A tree is comprised of nodes. These nodes connect to each other in a heirarchicy. Each node can then lead to other nodes. A tree starts with a root node. A node that connects to another node is below that node in the heirarchy then it is a child node.  If a node has a child, then it is a parent. If a node has no children then it is a leaf node. A level represents the distance from the root node. The height of a tree is represented how many levels a tree has, and is this the furthest distance a node is from the root.</p>
+<p>If every node on levels 0 to height - 1 has the max number of chilren then the tree is full and balanced. If nodes can have multiple parents, then it is a recombinding tree and can be referred to as a lattice. If each node can only have a max of 2 children, then it is a binomial tree.</p>
+<p class="dot"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 9.0.0 (20230911.1827)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="206pt" height="188pt" viewBox="0.00 0.00 206.00 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-184 202,-184 202,4 -4,4"></polygon>
+<!-- 0.1 -->
+<g id="node1" class="node">
+<title>0.1</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-162" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-157.8" font-family="Times,serif" font-size="14.00">0.1</text>
+</g>
+<!-- 1.1 -->
+<g id="node2" class="node">
+<title>1.1</title>
+<ellipse fill="none" stroke="black" cx="63" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="63" y="-85.8" font-family="Times,serif" font-size="14.00">1.1</text>
+</g>
+<!-- 0.1&#45;&gt;1.1 -->
+<g id="edge1" class="edge">
+<title>0.1-&gt;1.1</title>
+<path fill="none" stroke="black" d="M90.65,-144.76C86.42,-136.55 81.19,-126.37 76.42,-117.09"></path>
+<polygon fill="black" stroke="black" points="79.68,-115.79 72,-108.49 73.46,-118.99 79.68,-115.79"></polygon>
+</g>
+<!-- 1.2 -->
+<g id="node3" class="node">
+<title>1.2</title>
+<ellipse fill="none" stroke="black" cx="135" cy="-90" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="135" y="-85.8" font-family="Times,serif" font-size="14.00">1.2</text>
+</g>
+<!-- 0.1&#45;&gt;1.2 -->
+<g id="edge2" class="edge">
+<title>0.1-&gt;1.2</title>
+<path fill="none" stroke="black" d="M107.35,-144.76C111.58,-136.55 116.81,-126.37 121.58,-117.09"></path>
+<polygon fill="black" stroke="black" points="124.54,-118.99 126,-108.49 118.32,-115.79 124.54,-118.99"></polygon>
+</g>
+<!-- 2.1 -->
+<g id="node4" class="node">
+<title>2.1</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-13.8" font-family="Times,serif" font-size="14.00">2.1</text>
+</g>
+<!-- 1.1&#45;&gt;2.1 -->
+<g id="edge3" class="edge">
+<title>1.1-&gt;2.1</title>
+<path fill="none" stroke="black" d="M54.65,-72.76C50.42,-64.55 45.19,-54.37 40.42,-45.09"></path>
+<polygon fill="black" stroke="black" points="43.68,-43.79 36,-36.49 37.46,-46.99 43.68,-43.79"></polygon>
+</g>
+<!-- 2.2 -->
+<g id="node5" class="node">
+<title>2.2</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-13.8" font-family="Times,serif" font-size="14.00">2.2</text>
+</g>
+<!-- 1.1&#45;&gt;2.2 -->
+<g id="edge4" class="edge">
+<title>1.1-&gt;2.2</title>
+<path fill="none" stroke="black" d="M71.35,-72.76C75.58,-64.55 80.81,-54.37 85.58,-45.09"></path>
+<polygon fill="black" stroke="black" points="88.54,-46.99 90,-36.49 82.32,-43.79 88.54,-46.99"></polygon>
+</g>
+<!-- 1.2&#45;&gt;2.2 -->
+<g id="edge5" class="edge">
+<title>1.2-&gt;2.2</title>
+<path fill="none" stroke="black" d="M126.65,-72.76C122.42,-64.55 117.19,-54.37 112.42,-45.09"></path>
+<polygon fill="black" stroke="black" points="115.68,-43.79 108,-36.49 109.46,-46.99 115.68,-43.79"></polygon>
+</g>
+<!-- 2.3 -->
+<g id="node6" class="node">
+<title>2.3</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-13.8" font-family="Times,serif" font-size="14.00">2.3</text>
+</g>
+<!-- 1.2&#45;&gt;2.3 -->
+<g id="edge6" class="edge">
+<title>1.2-&gt;2.3</title>
+<path fill="none" stroke="black" d="M143.35,-72.76C147.58,-64.55 152.81,-54.37 157.58,-45.09"></path>
+<polygon fill="black" stroke="black" points="160.54,-46.99 162,-36.49 154.32,-43.79 160.54,-46.99"></polygon>
+</g>
+</g>
+</svg>
+</p><h5 id="bond-valuation">Bond valuation </h5>
+<p>We can construct an interest rate tree to represent forward rates to discount our cashflows. Each node represents the distount rate for that period, which has a 50% chance of being the forward rate.</p>
+<p engine="dot" class="dot"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 9.0.0 (20230911.1827)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="278pt" height="310pt" viewBox="0.00 0.00 278.00 310.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 306.4)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-306.4 274,-306.4 274,4 -4,4"></polygon>
+<!-- A1 -->
+<g id="node1" class="node">
+<title>A1</title>
+<ellipse fill="none" stroke="black" cx="107" cy="-284.4" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="107" y="-280.2" font-family="Times,serif" font-size="14.00">4%</text>
+</g>
+<!-- B1 -->
+<g id="node2" class="node">
+<title>B1</title>
+<ellipse fill="none" stroke="black" cx="71" cy="-195.6" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="71" y="-191.4" font-family="Times,serif" font-size="14.00">3%</text>
+</g>
+<!-- A1&#45;&gt;B1 -->
+<g id="edge1" class="edge">
+<title>A1-&gt;B1</title>
+<path fill="none" stroke="black" d="M100.06,-266.66C95.03,-254.54 88.12,-237.87 82.3,-223.84"></path>
+<polygon fill="black" stroke="black" points="85.56,-222.58 78.5,-214.68 79.1,-225.26 85.56,-222.58"></polygon>
+<text text-anchor="middle" x="97.25" y="-235.8" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- B2 -->
+<g id="node3" class="node">
+<title>B2</title>
+<ellipse fill="none" stroke="black" cx="143" cy="-195.6" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="143" y="-191.4" font-family="Times,serif" font-size="14.00">5%</text>
+</g>
+<!-- A1&#45;&gt;B2 -->
+<g id="edge2" class="edge">
+<title>A1-&gt;B2</title>
+<path fill="none" stroke="black" d="M113.94,-266.66C118.97,-254.54 125.88,-237.87 131.7,-223.84"></path>
+<polygon fill="black" stroke="black" points="134.9,-225.26 135.5,-214.68 128.44,-222.58 134.9,-225.26"></polygon>
+<text text-anchor="middle" x="133.25" y="-235.8" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- C1 -->
+<g id="node4" class="node">
+<title>C1</title>
+<ellipse fill="none" stroke="black" cx="46" cy="-106.8" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="46" y="-102.6" font-family="Times,serif" font-size="14.00">2%</text>
+</g>
+<!-- B1&#45;&gt;C1 -->
+<g id="edge3" class="edge">
+<title>B1-&gt;C1</title>
+<path fill="none" stroke="black" d="M65.17,-177.58C63.28,-171.88 61.23,-165.49 59.5,-159.6 57.24,-151.9 54.96,-143.51 52.95,-135.76"></path>
+<polygon fill="black" stroke="black" points="56.35,-134.96 50.49,-126.14 49.57,-136.69 56.35,-134.96"></polygon>
+<text text-anchor="middle" x="65.25" y="-147" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- C2 -->
+<g id="node5" class="node">
+<title>C2</title>
+<ellipse fill="none" stroke="black" cx="118" cy="-106.8" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="118" y="-102.6" font-family="Times,serif" font-size="14.00">4%</text>
+</g>
+<!-- B1&#45;&gt;C2 -->
+<g id="edge4" class="edge">
+<title>B1-&gt;C2</title>
+<path fill="none" stroke="black" d="M79.84,-178.27C86.6,-165.79 96.06,-148.32 103.87,-133.9"></path>
+<polygon fill="black" stroke="black" points="106.79,-135.84 108.48,-125.38 100.64,-132.51 106.79,-135.84"></polygon>
+<text text-anchor="middle" x="103.25" y="-147" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- B2&#45;&gt;C2 -->
+<g id="edge5" class="edge">
+<title>B2-&gt;C2</title>
+<path fill="none" stroke="black" d="M138.06,-177.45C134.64,-165.56 130,-149.46 126.05,-135.74"></path>
+<polygon fill="black" stroke="black" points="129.48,-135.01 123.35,-126.37 122.75,-136.95 129.48,-135.01"></polygon>
+<text text-anchor="middle" x="137.25" y="-147" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- C3 -->
+<g id="node6" class="node">
+<title>C3</title>
+<ellipse fill="none" stroke="black" cx="190" cy="-106.8" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="190" y="-102.6" font-family="Times,serif" font-size="14.00">6%</text>
+</g>
+<!-- B2&#45;&gt;C3 -->
+<g id="edge6" class="edge">
+<title>B2-&gt;C3</title>
+<path fill="none" stroke="black" d="M151.84,-178.27C158.6,-165.79 168.06,-148.32 175.87,-133.9"></path>
+<polygon fill="black" stroke="black" points="178.79,-135.84 180.48,-125.38 172.64,-132.51 178.79,-135.84"></polygon>
+<text text-anchor="middle" x="175.25" y="-147" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- D1 -->
+<g id="node7" class="node">
+<title>D1</title>
+<ellipse fill="none" stroke="black" cx="27" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="27" y="-13.8" font-family="Times,serif" font-size="14.00">1%</text>
+</g>
+<!-- C1&#45;&gt;D1 -->
+<g id="edge7" class="edge">
+<title>C1-&gt;D1</title>
+<path fill="none" stroke="black" d="M38,-89.42C35.51,-83.66 33.03,-77.06 31.5,-70.8 29.7,-63.43 28.6,-55.33 27.93,-47.75"></path>
+<polygon fill="black" stroke="black" points="31.43,-47.74 27.29,-37.99 24.45,-48.2 31.43,-47.74"></polygon>
+<text text-anchor="middle" x="37.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- D2 -->
+<g id="node8" class="node">
+<title>D2</title>
+<ellipse fill="none" stroke="black" cx="99" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="99" y="-13.8" font-family="Times,serif" font-size="14.00">3%</text>
+</g>
+<!-- C1&#45;&gt;D2 -->
+<g id="edge8" class="edge">
+<title>C1-&gt;D2</title>
+<path fill="none" stroke="black" d="M55.72,-89.88C63.44,-77.23 74.39,-59.3 83.35,-44.64"></path>
+<polygon fill="black" stroke="black" points="86.15,-46.76 88.37,-36.41 80.17,-43.12 86.15,-46.76"></polygon>
+<text text-anchor="middle" x="83.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- C2&#45;&gt;D2 -->
+<g id="edge9" class="edge">
+<title>C2-&gt;D2</title>
+<path fill="none" stroke="black" d="M114.25,-88.65C111.67,-76.88 108.19,-60.99 105.21,-47.35"></path>
+<polygon fill="black" stroke="black" points="108.63,-46.61 103.07,-37.59 101.79,-48.11 108.63,-46.61"></polygon>
+<text text-anchor="middle" x="115.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- D3 -->
+<g id="node9" class="node">
+<title>D3</title>
+<ellipse fill="none" stroke="black" cx="171" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="171" y="-13.8" font-family="Times,serif" font-size="14.00">5%</text>
+</g>
+<!-- C2&#45;&gt;D3 -->
+<g id="edge10" class="edge">
+<title>C2-&gt;D3</title>
+<path fill="none" stroke="black" d="M127.72,-89.88C135.44,-77.23 146.39,-59.3 155.35,-44.64"></path>
+<polygon fill="black" stroke="black" points="158.15,-46.76 160.37,-36.41 152.17,-43.12 158.15,-46.76"></polygon>
+<text text-anchor="middle" x="154.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- C3&#45;&gt;D3 -->
+<g id="edge11" class="edge">
+<title>C3-&gt;D3</title>
+<path fill="none" stroke="black" d="M186.25,-88.65C183.67,-76.88 180.19,-60.99 177.21,-47.35"></path>
+<polygon fill="black" stroke="black" points="180.63,-46.61 175.07,-37.59 173.79,-48.11 180.63,-46.61"></polygon>
+<text text-anchor="middle" x="187.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- D4 -->
+<g id="node10" class="node">
+<title>D4</title>
+<ellipse fill="none" stroke="black" cx="243" cy="-18" rx="27" ry="18"></ellipse>
+<text text-anchor="middle" x="243" y="-13.8" font-family="Times,serif" font-size="14.00">7%</text>
+</g>
+<!-- C3&#45;&gt;D4 -->
+<g id="edge12" class="edge">
+<title>C3-&gt;D4</title>
+<path fill="none" stroke="black" d="M199.72,-89.88C207.44,-77.23 218.39,-59.3 227.35,-44.64"></path>
+<polygon fill="black" stroke="black" points="230.15,-46.76 232.37,-36.41 224.17,-43.12 230.15,-46.76"></polygon>
+<text text-anchor="middle" x="226.25" y="-58.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+</g>
+</svg>
+</p><h5 id="backward-induction">Backward Induction </h5>
+<p>Start from the end nodes when the bond matures and work backwards to calculate a price for t = 0. This example is an 2 % annual coupon bond that matures in 4 years.</p>
+<p class="dot"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+
+<!-- Generated by graphviz version 9.0.0 (20230911.1827)
+ -->
+<!-- Title: structs Pages: 1 -->
+<svg width="1031pt" height="571pt" viewBox="0.00 0.00 1031.38 571.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 567.4)">
+<title>structs</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-567.4 1027.38,-567.4 1027.38,4 -4,4"></polygon>
+<!-- structA1 -->
+<g id="node1" class="node">
+<title>structA1</title>
+<polygon fill="none" stroke="black" points="318.5,-488.5 318.5,-562.9 645.38,-562.9 645.38,-488.5 318.5,-488.5"></polygon>
+<text text-anchor="middle" x="367.49" y="-546.3" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="318.5,-538.1 416.48,-538.1"></polyline>
+<text text-anchor="middle" x="367.49" y="-521.5" font-family="Times,serif" font-size="14.00">4%</text>
+<polyline fill="none" stroke="black" points="416.48,-513.3 416.48,-562.9"></polyline>
+<text text-anchor="middle" x="471.23" y="-546.3" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="416.48,-538.1 525.98,-538.1"></polyline>
+<text text-anchor="middle" x="471.23" y="-521.5" font-family="Times,serif" font-size="14.00">92.82</text>
+<polyline fill="none" stroke="black" points="525.98,-513.3 525.98,-562.9"></polyline>
+<text text-anchor="middle" x="585.59" y="-546.3" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="525.98,-538.1 645.19,-538.1"></polyline>
+<text text-anchor="middle" x="585.59" y="-521.5" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="318.5,-513.3 645.38,-513.3"></polyline>
+<text text-anchor="middle" x="481.94" y="-496.7" font-family="Times,serif" font-size="14.00">.5 * (97.21 + 2) / (1 + 4%) + .5 * (91.86 + 1) / (1 + 4%)</text>
+</g>
+<!-- structB1 -->
+<g id="node2" class="node">
+<title>structB1</title>
+<polygon fill="none" stroke="black" points="141,-360.3 141,-434.7 474.88,-434.7 474.88,-360.3 141,-360.3"></polygon>
+<text text-anchor="middle" x="191.49" y="-418.1" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="141,-409.9 241.98,-409.9"></polyline>
+<text text-anchor="middle" x="191.49" y="-393.3" font-family="Times,serif" font-size="14.00">3%</text>
+<polyline fill="none" stroke="black" points="241.98,-385.1 241.98,-434.7"></polyline>
+<text text-anchor="middle" x="297.73" y="-418.1" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="241.98,-409.9 353.48,-409.9"></polyline>
+<text text-anchor="middle" x="297.73" y="-393.3" font-family="Times,serif" font-size="14.00">97.21</text>
+<polyline fill="none" stroke="black" points="353.48,-385.1 353.48,-434.7"></polyline>
+<text text-anchor="middle" x="414.09" y="-418.1" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="353.48,-409.9 474.69,-409.9"></polyline>
+<text text-anchor="middle" x="414.09" y="-393.3" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="141,-385.1 474.88,-385.1"></polyline>
+<text text-anchor="middle" x="307.94" y="-368.5" font-family="Times,serif" font-size="14.00">.5 * (100.01 + 2) / (1 + 3%) + .5 * (96.24 + 2) / (1 + 3%)</text>
+</g>
+<!-- structA1&#45;&gt;structB1 -->
+<g id="edge1" class="edge">
+<title>structA1-&gt;structB1</title>
+<path fill="none" stroke="black" d="M431.61,-488.2C411.59,-473.68 388.4,-456.85 367.54,-441.73"></path>
+<polygon fill="black" stroke="black" points="369.83,-439.07 359.68,-436.03 365.72,-444.73 369.83,-439.07"></polygon>
+<text text-anchor="middle" x="411.19" y="-457.4" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structB2 -->
+<g id="node3" class="node">
+<title>structB2</title>
+<polygon fill="none" stroke="black" points="492.5,-360.3 492.5,-434.7 819.38,-434.7 819.38,-360.3 492.5,-360.3"></polygon>
+<text text-anchor="middle" x="541.49" y="-418.1" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="492.5,-409.9 590.48,-409.9"></polyline>
+<text text-anchor="middle" x="541.49" y="-393.3" font-family="Times,serif" font-size="14.00">5%</text>
+<polyline fill="none" stroke="black" points="590.48,-385.1 590.48,-434.7"></polyline>
+<text text-anchor="middle" x="645.23" y="-418.1" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="590.48,-409.9 699.98,-409.9"></polyline>
+<text text-anchor="middle" x="645.23" y="-393.3" font-family="Times,serif" font-size="14.00">91.86</text>
+<polyline fill="none" stroke="black" points="699.98,-385.1 699.98,-434.7"></polyline>
+<text text-anchor="middle" x="759.59" y="-418.1" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="699.98,-409.9 819.19,-409.9"></polyline>
+<text text-anchor="middle" x="759.59" y="-393.3" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="492.5,-385.1 819.38,-385.1"></polyline>
+<text text-anchor="middle" x="655.94" y="-368.5" font-family="Times,serif" font-size="14.00">.5 * (96.24 + 2) / (1 + 5%) + .5 * (92.67 + 2) / (1 + 5%)</text>
+</g>
+<!-- structA1&#45;&gt;structB2 -->
+<g id="edge2" class="edge">
+<title>structA1-&gt;structB2</title>
+<path fill="none" stroke="black" d="M532.27,-488.2C552.29,-473.68 575.48,-456.85 596.34,-441.73"></path>
+<polygon fill="black" stroke="black" points="598.16,-444.73 604.2,-436.03 594.05,-439.07 598.16,-444.73"></polygon>
+<text text-anchor="middle" x="584.19" y="-457.4" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structC1 -->
+<g id="node4" class="node">
+<title>structC1</title>
+<polygon fill="none" stroke="black" points="0,-232.1 0,-306.5 333.88,-306.5 333.88,-232.1 0,-232.1"></polygon>
+<text text-anchor="middle" x="48.99" y="-289.9" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="0,-281.7 97.98,-281.7"></polyline>
+<text text-anchor="middle" x="48.99" y="-265.1" font-family="Times,serif" font-size="14.00">2%</text>
+<polyline fill="none" stroke="black" points="97.98,-256.9 97.98,-306.5"></polyline>
+<text text-anchor="middle" x="156.23" y="-289.9" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="97.98,-281.7 214.48,-281.7"></polyline>
+<text text-anchor="middle" x="156.23" y="-265.1" font-family="Times,serif" font-size="14.00">100.01</text>
+<polyline fill="none" stroke="black" points="214.48,-256.9 214.48,-306.5"></polyline>
+<text text-anchor="middle" x="274.09" y="-289.9" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="214.48,-281.7 333.69,-281.7"></polyline>
+<text text-anchor="middle" x="274.09" y="-265.1" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="0,-256.9 333.88,-256.9"></polyline>
+<text text-anchor="middle" x="166.94" y="-240.3" font-family="Times,serif" font-size="14.00">.5 * (100.99 + 2) / (1 + 2%) + .5 * (99.03 + 2) / (1 + 2%)</text>
+</g>
+<!-- structB1&#45;&gt;structC1 -->
+<g id="edge3" class="edge">
+<title>structB1-&gt;structC1</title>
+<path fill="none" stroke="black" d="M267.16,-360C251.23,-345.74 232.82,-329.26 216.16,-314.35"></path>
+<polygon fill="black" stroke="black" points="218.54,-311.79 208.76,-307.73 213.88,-317.01 218.54,-311.79"></polygon>
+<text text-anchor="middle" x="251.19" y="-329.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structC2 -->
+<g id="node5" class="node">
+<title>structC2</title>
+<polygon fill="none" stroke="black" points="351.5,-232.1 351.5,-306.5 678.38,-306.5 678.38,-232.1 351.5,-232.1"></polygon>
+<text text-anchor="middle" x="400.49" y="-289.9" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="351.5,-281.7 449.48,-281.7"></polyline>
+<text text-anchor="middle" x="400.49" y="-265.1" font-family="Times,serif" font-size="14.00">4%</text>
+<polyline fill="none" stroke="black" points="449.48,-256.9 449.48,-306.5"></polyline>
+<text text-anchor="middle" x="504.23" y="-289.9" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="449.48,-281.7 558.98,-281.7"></polyline>
+<text text-anchor="middle" x="504.23" y="-265.1" font-family="Times,serif" font-size="14.00">96.24</text>
+<polyline fill="none" stroke="black" points="558.98,-256.9 558.98,-306.5"></polyline>
+<text text-anchor="middle" x="618.59" y="-289.9" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="558.98,-281.7 678.19,-281.7"></polyline>
+<text text-anchor="middle" x="618.59" y="-265.1" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="351.5,-256.9 678.38,-256.9"></polyline>
+<text text-anchor="middle" x="514.94" y="-240.3" font-family="Times,serif" font-size="14.00">.5 * (99.03 + 2) / (1 + 4%) + .5 * (97.14 + 2) / (1 + 4%)</text>
+</g>
+<!-- structB1&#45;&gt;structC2 -->
+<g id="edge4" class="edge">
+<title>structB1-&gt;structC2</title>
+<path fill="none" stroke="black" d="M368.09,-359.83C392.22,-345.12 420.19,-328.06 445.21,-312.81"></path>
+<polygon fill="black" stroke="black" points="446.99,-315.83 453.7,-307.63 443.34,-309.85 446.99,-315.83"></polygon>
+<text text-anchor="middle" x="429.19" y="-329.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structB2&#45;&gt;structC2 -->
+<g id="edge5" class="edge">
+<title>structB2-&gt;structC2</title>
+<path fill="none" stroke="black" d="M615.16,-360C599.23,-345.74 580.82,-329.26 564.16,-314.35"></path>
+<polygon fill="black" stroke="black" points="566.54,-311.79 556.76,-307.73 561.88,-317.01 566.54,-311.79"></polygon>
+<text text-anchor="middle" x="598.19" y="-329.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structC3 -->
+<g id="node6" class="node">
+<title>structC3</title>
+<polygon fill="none" stroke="black" points="696.5,-232.1 696.5,-306.5 1023.38,-306.5 1023.38,-232.1 696.5,-232.1"></polygon>
+<text text-anchor="middle" x="745.49" y="-289.9" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="696.5,-281.7 794.48,-281.7"></polyline>
+<text text-anchor="middle" x="745.49" y="-265.1" font-family="Times,serif" font-size="14.00">6%</text>
+<polyline fill="none" stroke="black" points="794.48,-256.9 794.48,-306.5"></polyline>
+<text text-anchor="middle" x="849.23" y="-289.9" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="794.48,-281.7 903.98,-281.7"></polyline>
+<text text-anchor="middle" x="849.23" y="-265.1" font-family="Times,serif" font-size="14.00">92.67</text>
+<polyline fill="none" stroke="black" points="903.98,-256.9 903.98,-306.5"></polyline>
+<text text-anchor="middle" x="963.59" y="-289.9" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="903.98,-281.7 1023.19,-281.7"></polyline>
+<text text-anchor="middle" x="963.59" y="-265.1" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="696.5,-256.9 1023.38,-256.9"></polyline>
+<text text-anchor="middle" x="859.94" y="-240.3" font-family="Times,serif" font-size="14.00">.5 * (97.14 + 2) / (1 + 6%) + .5 * (95.33 + 2) / (1 + 6%)</text>
+</g>
+<!-- structB2&#45;&gt;structC3 -->
+<g id="edge6" class="edge">
+<title>structB2-&gt;structC3</title>
+<path fill="none" stroke="black" d="M715.22,-359.83C739,-345.12 766.57,-328.06 791.22,-312.81"></path>
+<polygon fill="black" stroke="black" points="792.91,-315.88 799.58,-307.64 789.23,-309.93 792.91,-315.88"></polygon>
+<text text-anchor="middle" x="775.19" y="-329.2" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structD1 -->
+<g id="node7" class="node">
+<title>structD1</title>
+<polygon fill="none" stroke="black" points="92.59,-103.9 92.59,-178.3 241.29,-178.3 241.29,-103.9 92.59,-103.9"></polygon>
+<text text-anchor="middle" x="111.08" y="-161.7" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="92.59,-153.5 129.57,-153.5"></polyline>
+<text text-anchor="middle" x="111.08" y="-136.9" font-family="Times,serif" font-size="14.00">1%</text>
+<polyline fill="none" stroke="black" points="129.57,-128.7 129.57,-178.3"></polyline>
+<text text-anchor="middle" x="156.82" y="-161.7" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="129.57,-153.5 184.07,-153.5"></polyline>
+<text text-anchor="middle" x="156.82" y="-136.9" font-family="Times,serif" font-size="14.00">100.99</text>
+<polyline fill="none" stroke="black" points="184.07,-128.7 184.07,-178.3"></polyline>
+<text text-anchor="middle" x="212.68" y="-161.7" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="184.07,-153.5 241.29,-153.5"></polyline>
+<text text-anchor="middle" x="212.68" y="-136.9" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="92.59,-128.7 241.29,-128.7"></polyline>
+<text text-anchor="middle" x="166.94" y="-112.1" font-family="Times,serif" font-size="14.00">(100 + 2) / (1 + 1%)</text>
+</g>
+<!-- structC1&#45;&gt;structD1 -->
+<g id="edge7" class="edge">
+<title>structC1-&gt;structD1</title>
+<path fill="none" stroke="black" d="M166.94,-231.8C166.94,-218.72 166.94,-203.77 166.94,-189.88"></path>
+<polygon fill="black" stroke="black" points="170.44,-190.03 166.94,-180.03 163.44,-190.03 170.44,-190.03"></polygon>
+<text text-anchor="middle" x="172.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structD2 -->
+<g id="node8" class="node">
+<title>structD2</title>
+<polygon fill="none" stroke="black" points="365.09,-103.9 365.09,-178.3 506.79,-178.3 506.79,-103.9 365.09,-103.9"></polygon>
+<text text-anchor="middle" x="383.58" y="-161.7" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="365.09,-153.5 402.07,-153.5"></polyline>
+<text text-anchor="middle" x="383.58" y="-136.9" font-family="Times,serif" font-size="14.00">3%</text>
+<polyline fill="none" stroke="black" points="402.07,-128.7 402.07,-178.3"></polyline>
+<text text-anchor="middle" x="425.82" y="-161.7" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="402.07,-153.5 449.57,-153.5"></polyline>
+<text text-anchor="middle" x="425.82" y="-136.9" font-family="Times,serif" font-size="14.00">99.03</text>
+<polyline fill="none" stroke="black" points="449.57,-128.7 449.57,-178.3"></polyline>
+<text text-anchor="middle" x="478.18" y="-161.7" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="449.57,-153.5 506.79,-153.5"></polyline>
+<text text-anchor="middle" x="478.18" y="-136.9" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="365.09,-128.7 506.79,-128.7"></polyline>
+<text text-anchor="middle" x="435.94" y="-112.1" font-family="Times,serif" font-size="14.00">(100 + 2) / (1 + 3%)</text>
+</g>
+<!-- structC1&#45;&gt;structD2 -->
+<g id="edge8" class="edge">
+<title>structC1-&gt;structD2</title>
+<path fill="none" stroke="black" d="M245.11,-231.63C279.56,-215.47 320.02,-196.48 354.81,-180.16"></path>
+<polygon fill="black" stroke="black" points="355.99,-183.47 363.56,-176.06 353.02,-177.14 355.99,-183.47"></polygon>
+<text text-anchor="middle" x="323.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structC2&#45;&gt;structD2 -->
+<g id="edge9" class="edge">
+<title>structC2-&gt;structD2</title>
+<path fill="none" stroke="black" d="M492.09,-231.8C483.57,-218.19 473.79,-202.57 464.81,-188.22"></path>
+<polygon fill="black" stroke="black" points="467.81,-186.42 459.54,-179.8 461.88,-190.14 467.81,-186.42"></polygon>
+<text text-anchor="middle" x="485.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structD3 -->
+<g id="node9" class="node">
+<title>structD3</title>
+<polygon fill="none" stroke="black" points="537.09,-103.9 537.09,-178.3 678.79,-178.3 678.79,-103.9 537.09,-103.9"></polygon>
+<text text-anchor="middle" x="555.58" y="-161.7" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="537.09,-153.5 574.07,-153.5"></polyline>
+<text text-anchor="middle" x="555.58" y="-136.9" font-family="Times,serif" font-size="14.00">5%</text>
+<polyline fill="none" stroke="black" points="574.07,-128.7 574.07,-178.3"></polyline>
+<text text-anchor="middle" x="597.82" y="-161.7" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="574.07,-153.5 621.57,-153.5"></polyline>
+<text text-anchor="middle" x="597.82" y="-136.9" font-family="Times,serif" font-size="14.00">97.14</text>
+<polyline fill="none" stroke="black" points="621.57,-128.7 621.57,-178.3"></polyline>
+<text text-anchor="middle" x="650.18" y="-161.7" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="621.57,-153.5 678.79,-153.5"></polyline>
+<text text-anchor="middle" x="650.18" y="-136.9" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="537.09,-128.7 678.79,-128.7"></polyline>
+<text text-anchor="middle" x="607.94" y="-112.1" font-family="Times,serif" font-size="14.00">(100 + 2) / (1 + 5%)</text>
+</g>
+<!-- structC2&#45;&gt;structD3 -->
+<g id="edge10" class="edge">
+<title>structC2-&gt;structD3</title>
+<path fill="none" stroke="black" d="M541.84,-231.8C552.06,-217.93 563.82,-201.97 574.56,-187.39"></path>
+<polygon fill="black" stroke="black" points="577.09,-189.87 580.2,-179.74 571.45,-185.71 577.09,-189.87"></polygon>
+<text text-anchor="middle" x="572.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structC3&#45;&gt;structD3 -->
+<g id="edge11" class="edge">
+<title>structC3-&gt;structD3</title>
+<path fill="none" stroke="black" d="M786.71,-231.63C756.16,-216.33 720.55,-198.5 689.2,-182.79"></path>
+<polygon fill="black" stroke="black" points="691.04,-179.8 680.53,-178.45 687.9,-186.06 691.04,-179.8"></polygon>
+<text text-anchor="middle" x="754.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structD4 -->
+<g id="node10" class="node">
+<title>structD4</title>
+<polygon fill="none" stroke="black" points="789.09,-103.9 789.09,-178.3 930.79,-178.3 930.79,-103.9 789.09,-103.9"></polygon>
+<text text-anchor="middle" x="807.58" y="-161.7" font-family="Times,serif" font-size="14.00">rate</text>
+<polyline fill="none" stroke="black" points="789.09,-153.5 826.07,-153.5"></polyline>
+<text text-anchor="middle" x="807.58" y="-136.9" font-family="Times,serif" font-size="14.00">7%</text>
+<polyline fill="none" stroke="black" points="826.07,-128.7 826.07,-178.3"></polyline>
+<text text-anchor="middle" x="849.82" y="-161.7" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="826.07,-153.5 873.57,-153.5"></polyline>
+<text text-anchor="middle" x="849.82" y="-136.9" font-family="Times,serif" font-size="14.00">95.33</text>
+<polyline fill="none" stroke="black" points="873.57,-128.7 873.57,-178.3"></polyline>
+<text text-anchor="middle" x="902.18" y="-161.7" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="873.57,-153.5 930.79,-153.5"></polyline>
+<text text-anchor="middle" x="902.18" y="-136.9" font-family="Times,serif" font-size="14.00">2</text>
+<polyline fill="none" stroke="black" points="789.09,-128.7 930.79,-128.7"></polyline>
+<text text-anchor="middle" x="859.94" y="-112.1" font-family="Times,serif" font-size="14.00">(100 + 2) / (1 + 7%)</text>
+</g>
+<!-- structC3&#45;&gt;structD4 -->
+<g id="edge12" class="edge">
+<title>structC3-&gt;structD4</title>
+<path fill="none" stroke="black" d="M859.94,-231.8C859.94,-218.72 859.94,-203.77 859.94,-189.88"></path>
+<polygon fill="black" stroke="black" points="863.44,-190.03 859.94,-180.03 856.44,-190.03 863.44,-190.03"></polygon>
+<text text-anchor="middle" x="865.19" y="-201" font-family="Times,serif" font-size="14.00">.5</text>
+</g>
+<!-- structE1 -->
+<g id="node11" class="node">
+<title>structE1</title>
+<polygon fill="none" stroke="black" points="116.33,-0.5 116.33,-50.1 217.55,-50.1 217.55,-0.5 116.33,-0.5"></polygon>
+<text text-anchor="middle" x="138.33" y="-33.5" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="116.33,-25.3 160.33,-25.3"></polyline>
+<text text-anchor="middle" x="138.33" y="-8.7" font-family="Times,serif" font-size="14.00">100</text>
+<polyline fill="none" stroke="black" points="160.33,-0.5 160.33,-50.1"></polyline>
+<text text-anchor="middle" x="188.94" y="-33.5" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="160.33,-25.3 217.55,-25.3"></polyline>
+<text text-anchor="middle" x="188.94" y="-8.7" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- structD1&#45;&gt;structE1 -->
+<g id="edge13" class="edge">
+<title>structD1-&gt;structE1</title>
+<path fill="none" stroke="black" d="M166.94,-103.47C166.94,-90 166.94,-74.79 166.94,-61.45"></path>
+<polygon fill="black" stroke="black" points="170.44,-61.82 166.94,-51.82 163.44,-61.82 170.44,-61.82"></polygon>
+<text text-anchor="middle" x="170.44" y="-72.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- structE2 -->
+<g id="node12" class="node">
+<title>structE2</title>
+<polygon fill="none" stroke="black" points="385.33,-0.5 385.33,-50.1 486.55,-50.1 486.55,-0.5 385.33,-0.5"></polygon>
+<text text-anchor="middle" x="407.33" y="-33.5" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="385.33,-25.3 429.33,-25.3"></polyline>
+<text text-anchor="middle" x="407.33" y="-8.7" font-family="Times,serif" font-size="14.00">100</text>
+<polyline fill="none" stroke="black" points="429.33,-0.5 429.33,-50.1"></polyline>
+<text text-anchor="middle" x="457.94" y="-33.5" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="429.33,-25.3 486.55,-25.3"></polyline>
+<text text-anchor="middle" x="457.94" y="-8.7" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- structD2&#45;&gt;structE2 -->
+<g id="edge14" class="edge">
+<title>structD2-&gt;structE2</title>
+<path fill="none" stroke="black" d="M435.94,-103.47C435.94,-90 435.94,-74.79 435.94,-61.45"></path>
+<polygon fill="black" stroke="black" points="439.44,-61.82 435.94,-51.82 432.44,-61.82 439.44,-61.82"></polygon>
+<text text-anchor="middle" x="439.44" y="-72.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- structE3 -->
+<g id="node13" class="node">
+<title>structE3</title>
+<polygon fill="none" stroke="black" points="557.33,-0.5 557.33,-50.1 658.55,-50.1 658.55,-0.5 557.33,-0.5"></polygon>
+<text text-anchor="middle" x="579.33" y="-33.5" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="557.33,-25.3 601.33,-25.3"></polyline>
+<text text-anchor="middle" x="579.33" y="-8.7" font-family="Times,serif" font-size="14.00">100</text>
+<polyline fill="none" stroke="black" points="601.33,-0.5 601.33,-50.1"></polyline>
+<text text-anchor="middle" x="629.94" y="-33.5" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="601.33,-25.3 658.55,-25.3"></polyline>
+<text text-anchor="middle" x="629.94" y="-8.7" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- structD3&#45;&gt;structE3 -->
+<g id="edge15" class="edge">
+<title>structD3-&gt;structE3</title>
+<path fill="none" stroke="black" d="M607.94,-103.47C607.94,-90 607.94,-74.79 607.94,-61.45"></path>
+<polygon fill="black" stroke="black" points="611.44,-61.82 607.94,-51.82 604.44,-61.82 611.44,-61.82"></polygon>
+<text text-anchor="middle" x="611.44" y="-72.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+<!-- structE4 -->
+<g id="node14" class="node">
+<title>structE4</title>
+<polygon fill="none" stroke="black" points="809.33,-0.5 809.33,-50.1 910.55,-50.1 910.55,-0.5 809.33,-0.5"></polygon>
+<text text-anchor="middle" x="831.33" y="-33.5" font-family="Times,serif" font-size="14.00">bond</text>
+<polyline fill="none" stroke="black" points="809.33,-25.3 853.33,-25.3"></polyline>
+<text text-anchor="middle" x="831.33" y="-8.7" font-family="Times,serif" font-size="14.00">100</text>
+<polyline fill="none" stroke="black" points="853.33,-0.5 853.33,-50.1"></polyline>
+<text text-anchor="middle" x="881.94" y="-33.5" font-family="Times,serif" font-size="14.00">coupon</text>
+<polyline fill="none" stroke="black" points="853.33,-25.3 910.55,-25.3"></polyline>
+<text text-anchor="middle" x="881.94" y="-8.7" font-family="Times,serif" font-size="14.00">2</text>
+</g>
+<!-- structD4&#45;&gt;structE4 -->
+<g id="edge16" class="edge">
+<title>structD4-&gt;structE4</title>
+<path fill="none" stroke="black" d="M859.94,-103.47C859.94,-90 859.94,-74.79 859.94,-61.45"></path>
+<polygon fill="black" stroke="black" points="863.44,-61.82 859.94,-51.82 856.44,-61.82 863.44,-61.82"></polygon>
+<text text-anchor="middle" x="863.44" y="-72.8" font-family="Times,serif" font-size="14.00">1</text>
+</g>
+</g>
+</svg>
+</p><h5 id="calibration">Calibration </h5>
+<p>So how do you get the interest rate tree?</p>
+<p>You build out the tree iteratively, term by term, changing the interest rates of a corresponding bond using the par yield so that the bond equals par. The upper rate is equal to the lower rate * e ^ (2 * sigma * sqrt(t))</p>
+<p>The par rate represents the coupon the bond recieves when calibrating for each term. Remember the spot rate bootstrapping, this is very similar but with an array of interest rates for each term. (also the interest rate in the tree are representated as forward rates in this case, but can be built out into spot rates for pathwise modeling)</p>
+<h2 id="fixed-income-analysis-application">Fixed Income Analysis Application </h2>
+<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-3" data-cmd="python"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h4 id="calculations">Calculations </h4>
+<p>The program works by building out an interest rates tree using the par and spot rates inputed.</p>
+<p>The program iteratively constructs the interest rate tree by guessing what the forward rates may be and calculating the bond value through a bond value tree. If the bond value is too high, it guesses higher rates, if the bond value is too low it guesses lower interest rates. When the bond value was too high and is now too low or vice versa, the amount the interest_rates change decreases. This continues up to a precision of 4 decimal places (or however many the precision variable is set to).</p>
+<p>The tree is organized as a multidimensional list, where each list in the tree represents a layer. The index for the children is the index of the parent and the parent + 1.</p>
+<h3 id="how-to-use-version-01">How to use version 0.1 </h3>
+<ol>
+<li>Fill out the Rates.xlsx excel fill, do not change the column names or sheet names.</li>
+<li>Run the program.</li>
+<li>Select the Rates.xlsx excel file.</li>
+<li>Wait for the program to finish calculating.</li>
+<li>Select a file output, name it however you please.</li>
+<li>The program is finished, open up your output file and view the results.</li>
+</ol>
+<h2 id="coding-and-creation">Coding and Creation </h2>
+<p>This section is written for the purpose of promoting contributons to this document and to the code base</p>
+<h4 id="python-scripts">Python Scripts </h4>
+<p>The scripts should hopefully be self explanitory and follow the general guidlines for object oriented programming and writing python.</p>
+<p>If you are unfamiliar with python I have provide the general steps, but I would highly recommend you read books and the documentation for the packages you want to use. the matplotlib documentation is extensive and goes far beyond what is taught in the TU Business Analytics curriculum.</p>
+<h5 id="get-started">Get started </h5>
+<p>Download python, make sure it is added to your path environment.<br>
+For windows, download off the windows store. You can do that by running <em>python</em> in the command terminal and downloading it.</p>
+<p>I used Visual Studio Code, you can install that by searching for it in a browser, click the download button, and run the launcher. Download the python extentions, including pylance. You can then create an environment by clicking into the top search bar and searching &gt;Python: Create Environment. The shortcut for running commands (&gt;) is CTRL + SHIFT + P. I used the venv environment.</p>
+<p>Use the terminal to download packages you want with <em>pip install "package"</em> or <em>python -m pip install "package"</em>. If those don't work, try changing directory with command <em>cd</em> into or out of venv.</p>
+<p>Now start coding. Read documentations of the packages you use. I use matplotlib and tkinter mostly. ChatGPT is sometimes helpful, and 90% of the time wrong, if it doesn't provide code that works as intended read the documenation.</p>
+<h5 id="building-the-exe">Building the exe </h5>
+<p>I used pyinstaller to build the distributable executable file. Nuitka is also a viable option. I had issues with anti-virus when using the pyinstaller package.<br>
+The pyinstaller package seems to bundle a python interpreter with the executable which unpackages itself when run in order to run the python code. Nuitka, I believe, converts the python code into C++ and then into machine code, which may be preferable to avoid anti-virus issues.</p>
+<h4 id="documentation">Documentation </h4>
+<p>The documenation you are reading now was written in Visual Studio Code in a Markdown file using the Markdown Preview Enhanced extension.<br>
+You can make a markdown file with the .md extension and following the markdown syntax and guidlines. Markdown files can alternatively be written in other software, and are incredibly popular and useful. Github will host these files on their Github Pages.</p>
+<h4 id="future-contribution">Future Contribution </h4>
+<p>There are many possible ways to contribute and build upon this project. Use Bloomberg as a reference to the scale that these applications can take. Bloomberg an amazing and extensive data source that offers products ranging from 80,000 to 1,000,000,000 and more. Bloomberg offers many products that go way beyond the scope of what the SIF needs in many cases, but they can give insight into the value that this project can provide.</p>
+<h5 id="bloomberg">Bloomberg </h5>
+<p>I would love to enhance the api call capabilities of this application to the Bloomberg terminals. For future reference, there are two ways to access the bloomberg api documentation: One way is by searching for it in a browser and accessing the public api documentation, the other way is to access bloomberg's professional website using a bloomberg terminal login.<br>
+Using the bloomberg professional api documentation and resources is much preferred as they offer a more comprehensive and extensive guides, especially for python. They also offer a code guide tool that produces the code through a gui.<br>
+I would have also liked to explore the possibility of the bloomberg APP Portal partnership, which would require the hosting of a .NET application and the SDK on a bloomberg terminal. They are not insurmountable, but require admin access for TU network computers and collaboration with Bloomberg.</p>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#tu-sif-fixed-income-analysis-documentation" class="md-toc-link"><p>TU SIF Fixed Income Analysis Documentation</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#introduction" class="md-toc-link">
+            <p>Introduction</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#fixed-income-concepts" class="md-toc-link">
+            <p>Fixed Income Concepts</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#fixed-income-analysis-application" class="md-toc-link"><p>Fixed Income Analysis Application</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#how-to-use-version-01" class="md-toc-link">
+            <p>How to use version 0.1</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#coding-and-creation" class="md-toc-link">
+            <p>Coding and Creation</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
