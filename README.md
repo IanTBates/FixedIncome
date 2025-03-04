@@ -18,7 +18,7 @@ The inspriration for this project was the CFA level 2 Fixed Income curriculum an
 There are serveral core yields that are important to understand in fixed income, we will focus on these four: yield to maturity (YTM), par (coupon*), spot (zero), and forward.
 
 The **yield to maturity** is the yield you are likely most familiar with, as it is commonly used in the present value formula: *N*, *I*, *PV*, *PMT*, *FV*; the *I* represents the yield to maturity and is expressed in this formula:
-    $$PV = \displaystyle\sum_{t=1}^n\frac {pmt} {(1 + I) ^ t}$$
+
 It is clear from this formula that the yield to maturity is a discount rate. It is the rate used to discount the cashflow and is compounded as a function of time. However, for each period it is a constant rate, which may not be an accurate portrayal of what we ussually witness in real life.
 
 In **yield curve** is the collection of yield rates over various periods of time. In normal (positive) economic conditions, the yield curve is upward sloping.
@@ -27,48 +27,10 @@ The **par yield** is the yield to maturity of a bond issued at par. This means t
 The OIS curve is a par curve: a series of par yields for different periods. The OIS curve is comprised of overnieght indexed swaps, which are plain vinilla interest rate swaps. This means that someone is agreeing to swap payments on some notional amount (lets say 1 million), where there is one fixed rate payer (4%) and one floating rate payer (Overnight Index Rates). So during the stipulated payment periods, they each exchange payments, the fixed rate payer always gives the same amount (40,000) and the floating rate payer always gives whatever the overnight index rate dictates (if 2% then 20,000).
 
 The **spot yield** or **zero yield** is the yield to maturity of a bond with zero coupons. This yield can be bootstrapped from the par yields on benchmark bonds. The formula for the spot yield is derived from:
-    $$1 = \displaystyle\sum_{t=1}^n\frac {par_n} {(1 + spot_t) ^ t}$$
-This equation can be expanded into a generalized form to calculate a single period where n is unknown, but 1 to n-1 is known:
-    $$1 = \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t} + \frac {par_n} {(1 + spot_n) ^ n}$$
-Rearranging it algebraically we can calculate the spot for time n:
-    $$1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t} = \frac {par_n} {(1 + spot_n) ^ n}$$
-    $$ {(1 + spot_n) ^ n} * (1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}) = {par_n} $$
-    $$ {(1 + spot_n) ^ n}  = \frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}$$
-    $$ {1 + spot_n}  = \sqrt[n]{\frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}}$$
-    $$ {spot_n}  = \sqrt[t]{\frac{par_n} {1 - \displaystyle\sum_{t=1}^{n-1}\frac {par_n} {(1 + spot_t) ^ t}}} - 1$$
+
 
 The **forward yield** is the relatively simpler. The forward yield is the yield that would be the spot yield from some point in time. Thus if we know what the spot yields are today we can derive what the expected yield should be at some point in the future, knowing how compouning rates work we derive:
-    $$FY_{{t2-t1} \; rate \; t1 \; from \; now }= \frac {(1 + spot_{t_2}) ^ {t_2}} {(1 + spot_{t_1}) ^ {t_1}}$$
 
-
-#### Example 1
-
-A Yield Curve ussually appears upward sloping and can be interpreted using a spline, notably using the method outlined by Nelson and Spiegel. My example is relatively simple, showing the typical nature of deminishing returns illustrated by convexity. 
-
-```python {cmd=true id="ex1input"}
-interest_rates_level = list(range(2,8))
-interest_rates_convex = list(range (2,8)) 
-interest_rates = [level - (convex / 2.5 )**1.5 for level, convex in zip( interest_rates_level, interest_rates_convex)]
-print(interest_rates_level)
-print(interest_rates_convex)
-print(interest_rates)
-```
-
-```python {cmd=true matplotlib=true continue="ex1input" id="ex1plot1"}
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.interpolate import make_interp_spline
-
-x = np.array(range(0,len(interest_rates)))
-y = interest_rates
-
-x_smooth = np.linspace(x.min(), x.max(), 300)
-spline = make_interp_spline(x, y)
-y_smooth = spline(x_smooth)
-
-plt.plot(x_smooth,y_smooth)
-plt.show() # show figure
-```
 The European Central Bank provides the yield curves from septermber 2004 for Par, Spot, and Instantaneous Forward Rates. View this link for real world exampls over time. 
 https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_area_yield_curves/html/index.en.html
 
@@ -86,107 +48,6 @@ A tree is comprised of nodes. These nodes connect to each other in a heirarchicy
 
 If every node on levels 0 to height - 1 has the max number of chilren then the tree is full and balanced. If nodes can have multiple parents, then it is a recombinding tree and can be referred to as a lattice. If each node can only have a max of 2 children, then it is a binomial tree.
 
-```dot
-digraph G{
-    0.1 -> 1.1
-    0.1 -> 1.2
-    1.1 -> 2.1
-    1.1 -> 2.2
-    1.2 -> 2.2
-    1.2 -> 2.3
-}
-```
-
-
-##### Bond valuation
-
-We can construct an interest rate tree to represent forward rates to discount our cashflows. Each node represents the distount rate for that period, which has a 50% chance of being the forward rate.
-
-```dot {engine="dot"}
-digraph G{
-    A1 [label="4%"];
-    B1 [label="3%"];
-    B2 [label="5%"];
-    C1 [label="2%"];
-    C2 [label="4%"];
-    C3 [label="6%"];
-    D1 [label="1%"];
-    D2 [label="3%"];
-    D3 [label="5%"];
-    D4 [label="7%"];
-    A1 -> B1 [label=".5"];
-    A1 -> B2 [label=".5"];
-    B1 -> C1 [label=".5"];
-    B1 -> C2 [label=".5"];
-    B2 -> C2 [label=".5"];
-    B2 -> C3 [label=".5"];
-    C1 -> D1 [label=".5"];
-    C1 -> D2 [label=".5"];
-    C2 -> D2 [label=".5"];
-    C2 -> D3 [label=".5"];
-    C3 -> D3 [label=".5"];
-    C3 -> D4 [label=".5"];
-}
-```
-##### Backward Induction
-
-Start from the end nodes when the bond matures and work backwards to calculate a price for t = 0. This example is an 2 % annual coupon bond that matures in 4 years.
-
-```dot
-digraph structs {
-    node [shape=record];
-    structA1 [label=" {{{rate | 4% } | { bond | 92.82 } | {coupon | 2}} | .5 * (97.21 + 2) / (1 + 4%) + .5 * (91.86 + 1) / (1 + 4%)}"];
-    structB1 [label=" {{{rate | 3% } | { bond | 97.21 } | {coupon | 2}} | .5 * (100.01 + 2) / (1 + 3%) + .5 * (96.24 + 2) / (1 + 3%)}"];
-    structB2 [label=" {{{rate | 5% } | { bond | 91.86 } | {coupon | 2}} | .5 * (96.24 + 2) / (1 + 5%) + .5 * (92.67 + 2) / (1 + 5%)}"];
-    structC1 [label=" {{{rate | 2% } | { bond | 100.01 } | {coupon | 2}} | .5 * (100.99 + 2) / (1 + 2%) + .5 * (99.03 + 2) / (1 + 2%)}"];
-    structC2 [label=" {{{rate | 4% } | { bond | 96.24 } | {coupon | 2}} | .5 * (99.03 + 2) / (1 + 4%) + .5 * (97.14 + 2) / (1 + 4%)}"];
-    structC3 [label=" {{{rate | 6% } | { bond | 92.67 } | {coupon | 2}} | .5 * (97.14 + 2) / (1 + 6%) + .5 * (95.33 + 2) / (1 + 6%)}"];
-    structD1 [label=" {{{rate | 1% } | { bond | 100.99 } | {coupon | 2}} | (100 + 2) / (1 + 1%)}"];
-    structD2 [label=" {{{rate | 3% } | { bond | 99.03 } | {coupon | 2}} | (100 + 2) / (1 + 3%)}"];
-    structD3 [label=" {{{rate | 5% } | { bond | 97.14 } | {coupon | 2}} | (100 + 2) / (1 + 5%)}"];
-    structD4 [label=" {{{rate | 7% } | { bond | 95.33 } | {coupon | 2}} | (100 + 2) / (1 + 7%)}"];
-    structE1 [label=" { bond | 100 } | {coupon | 2}"];
-    structE2 [label=" { bond | 100 } | {coupon | 2}"];
-    structE3 [label=" { bond | 100 } | {coupon | 2}"];
-    structE4 [label=" { bond | 100 } | {coupon | 2}"];
-
-    structA1 -> structB1 [label=".5"];
-    structA1 -> structB2 [label=".5"];
-    structB1 -> structC1 [label=".5"];
-    structB1 -> structC2 [label=".5"];
-    structB2 -> structC2 [label=".5"];
-    structB2 -> structC3 [label=".5"];
-    structC1 -> structD1 [label=".5"];
-    structC1 -> structD2 [label=".5"];
-    structC2 -> structD2 [label=".5"];
-    structC2 -> structD3 [label=".5"];
-    structC3 -> structD3 [label=".5"];
-    structC3 -> structD4 [label=".5"];
-    structD1 -> structE1 [label="1"];
-    structD2 -> structE2 [label="1"];
-    structD3 -> structE3 [label="1"];
-    structD4 -> structE4 [label="1"];   
-}
-```
-##### Calibration
-So how do you get the interest rate tree?
-
-You build out the tree iteratively, term by term, changing the interest rates of a corresponding bond using the par yield so that the bond equals par. The upper rate is equal to the lower rate * e ^ (2 * sigma * sqrt(t))
-
-The par rate represents the coupon the bond recieves when calibrating for each term. Remember the spot rate bootstrapping, this is very similar but with an array of interest rates for each term. (also the interest rate in the tree are representated as forward rates in this case, but can be built out into spot rates for pathwise modeling)
-
-## Fixed Income Analysis Application
-
-
-```python {cmd=true, hide=true}
-print('you can see this output message, but not this code')
-```
-
-```python {cmd=true, hide = true matplotlib=true}
-import matplotlib.pyplot as plt
-plt.plot([1,2,3, 4])
-plt.show() # show figure
-```
 
 
 #### Calculations
